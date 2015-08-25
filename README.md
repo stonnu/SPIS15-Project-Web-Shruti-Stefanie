@@ -1,1 +1,9 @@
 # SPIS15-Project-Web-Shruti-Stefanie
+
+Our project will be an app that takes in user input and offers ideas/categories on what a group of friends can do together when they have no idea what to do.
+
+The app is intended for only one user. This means that with a group of friends, everyone will gather around one app and "collaborate." The app will ask various questions in the form of a quiz (similar to the quizzes on the popular Buzzfeed website (http://www.buzzfeed.com/quizzes)). Questions will range from "How many people are in the group?" to "Are you feeling like staying indoors or going outdoors?" to "Are you willing to spend money today?" We aren't sure how many questions to ask yet, but we want to be able to ask enough to give accurate results.
+
+Once the quiz is over, depending on the user's answers, the app will output a list of 5 categories of things that the group of friends could do. (We picked 5 because we didn't want to overwhelm the user with too many options.) Categories include "Food," "Shopping," "Nature," "Staying at Home," "Physical Activity," etc. The list will be ranked in an order that corresponds to what the user answered, with number 1 being the most relevant to number 5 being the least. The user could then click on the categories, and under the categories will be a list of different options. For instance, "Food" might have a list of various restaurants in the area. (We were thinking of pulling data from a website like Yelp.com, but if it is too complicated, we might keep it simple and just list generic things like "Japanese Food," "Italian Food," "pho," etc.) "Nature" might list different parks or hiking attractions that the user could go to. The same idea goes for the rest of the categories.
+
+Once the backbone and basic structure of the app is finished, we'll add the decorative and aesthetic elements.
