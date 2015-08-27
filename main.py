@@ -33,6 +33,10 @@ def fourthQuestion():
 def fifthQuestion():
     return render_template('question5.html')
 
+@app.route('/question6')
+def sixthQuestion():
+    return render_template('question6.html')
+
 
 if __name__ == "__main__":
     app.run(port=5006, debug = False)
