@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Fifth Question{% endblock %}
+
+{% block content %}
+
+<h1>How active do you feel like being today?</h1>
+
+<form method="post" action="mailto:your email address">
+    <input type="radio" name="active" value="None">I don't want to move
+    <br>
+    <input type="radio" name="active" value="Little">I'm willing to walk around
+    <br>
+    <input type="radio" name="active" value="Lot">I have some extra energy to kill
+    <br>
+    <input type="radio" name="active" value="You are crazy">I'm ready to conquer the world
+</form>
+
+{% endblock %}

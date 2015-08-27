@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Sixth Question{% endblock %}
+
+{% block content %}
+
+<h1>Which of these character traits best applies to your group of friends?</h1>
+
+<form method="post" action="mailto:your email address">
+    <input type="radio" name="character traits" value="Adventurous">Adventurous
+    <br>
+    <input type="radio" name="character traits" value="Social">Social
+    <br>
+    <input type="radio" name="character traits" value="Calm">Calm
+    <br>
+    <input type="radio" name="character traits" value="Active">Active
+    <br>
+    <input type="radio" name="character traits" value="Crazy">Crazy
+    <br>
+    <input type="radio" name="character traits" value="2-4 people">2-4 People
+    <br>
+    <input type="radio" name="character traits" value="5-8 people">5-8 People
+    <br>
+    <input type="radio" name="character traits" value="more than 8 people">
+</form>
+
+{% endblock %}

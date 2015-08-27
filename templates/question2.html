@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Second Question{% endblock %}
+
+{% block content %}
+
+<h1>Are you hungry?</h1>
+
+<form method="post" action="mailto:your email address">
+    <input type="radio" name="hungry" value="yes">Yes
+    <br>
+    <input type="radio" name="hungry" value="no">No
+    
+</form>
+
+{% endblock %}

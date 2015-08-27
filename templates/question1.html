@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}First Question{% endblock %}
+
+{% block content %}
+
+<h1>How many people are in your group?</h1>
+
+<form method="post" action="mailto:your email address">
+    <input type="radio" name="number in group" value="1 person">1 Person
+    <br>
+    <input type="radio" name="number in group" value="2-4 people">2-4 People
+    <br>
+    <input type="radio" name="number in group" value="5-8 people">5-8 People
+    <br>
+    <input type="radio" name="number in group" value="more than 8 people">More than 8 People
+</form>
+
+{% endblock %}

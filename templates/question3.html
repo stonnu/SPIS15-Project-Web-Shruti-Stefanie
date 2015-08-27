@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Third Question{% endblock %}
+
+{% block content %}
+
+<h1>Do you feel like staying indoors or going outside?</h1>
+
+<form method="post" action="mailto:your email address">
+    <input type="radio" name="indoors or outdoors" value="Indoors">Indoors
+    <br>
+    <input type="radio" name="indoors or outdoors" value="Outdoors">Outdoors
+    
+</form>
+
+{% endblock %}
