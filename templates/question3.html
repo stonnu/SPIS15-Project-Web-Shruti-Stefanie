@@ -6,11 +6,12 @@
 
 <h1>Do you feel like staying indoors or going outside?</h1>
 
-<form method="post" action="mailto:your email address">
+<form method="post" action={{url_for("fourthQuestion")}}>
     <input type="radio" name="indoors or outdoors" value="Indoors">Indoors
     <br>
     <input type="radio" name="indoors or outdoors" value="Outdoors">Outdoors
-    
+    <br>
+    <input type ="submit" value="Next">
 </form>
 
 {% endblock %}

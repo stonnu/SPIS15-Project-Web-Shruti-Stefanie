@@ -6,7 +6,7 @@
 
 <h1>How much money are you willing to spend?</h1>
 
-<form method="post" action="mailto:your email address">
+<form method="post" action={{url_for("fifthQuestion")}}>
     <input type="radio" name="money" value="None">None
     <br>
     <input type="radio" name="money" value="Under $10">Under $10
@@ -14,7 +14,8 @@
     <input type="radio" name="money" value="$10-$25">$10-$25
     <br>
     <input type="radio" name="money" value="More than $25">More than $25
-    
+    <br>
+    <input type ="submit" value="Next">
 </form>
 
 {% endblock %}

@@ -6,11 +6,12 @@
 
 <h1>Are you hungry?</h1>
 
-<form method="post" action="mailto:your email address">
+<form method="post" action={{url_for("thirdQuestion")}}>
     <input type="radio" name="hungry" value="yes">Yes
     <br>
     <input type="radio" name="hungry" value="no">No
-    
+    <br>
+    <input type ="submit" value="Next">
 </form>
 
 {% endblock %}
