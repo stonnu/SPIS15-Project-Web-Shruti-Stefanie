@@ -28,19 +28,32 @@ def thirdQuestion():
 
 @app.route('/question4',methods=['get','post'])
 def fourthQuestion():
+    print "fourthQuestion"
     session["indoors or outdoors"]=request.form["indoors or outdoors"]
     return render_template('question4.html')
 
 
 @app.route('/question5',methods=['get','post'])
 def fifthQuestion():
+    print "fifthQuestion"
     session["money"]=request.form["money"]
     return render_template('question5.html')
 
 @app.route('/question6',methods=['get','post'])
 def sixthQuestion():
+    print "sixthQuestion"
     session["active"]=request.form["active"]
     return render_template('question6.html')
+
+def calculateResults():
+    '''eventually, this calculates results using values in the session'''
+    return ["Shopping", "Staying at Home", "Eating"]
+
+@app.route('/results',methods=['get','post'])
+def results():
+    session["character traits"]=request.form["character traits"]
+    recommendedActivities = calculateResults()
+    return render_template('results.html', activities = recommendedActivities)
 
 @app.route('/eat',methods=['get','post'])
 def food():
@@ -75,4 +88,4 @@ def goExplore():
     return render_template('adventure.html')
 
 if __name__ == "__main__":
-    app.run(port=5006, debug = False)
+    app.run(port=5678, debug = True)

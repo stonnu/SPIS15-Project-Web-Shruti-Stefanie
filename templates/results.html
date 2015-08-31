@@ -8,5 +8,11 @@
 <p>Based on your answers to the quiz, here are some activities you will enjoy.
 Click on the categories that appeal to you for more detailed suggestions.</p>
 
+<ul>
+{% for a in activities    %}
+<li> {{ a }} </li>
+{% endfor    %}
+
+</ul>
 
 {% endblock %}
