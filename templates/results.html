@@ -9,8 +9,8 @@
 Click on the categories that appeal to you for more detailed suggestions.</p>
 
 <ul>
-{% for a in activities    %}
-<li> {{ a }} </li>
+{% for a in activities[0:3]  %}
+<li> {{ a }}, {{ points[a] }} </li>
 {% endfor    %}
 
 </ul>

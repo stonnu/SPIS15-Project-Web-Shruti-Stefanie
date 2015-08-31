@@ -47,13 +47,122 @@ def sixthQuestion():
 
 def calculateResults():
     '''eventually, this calculates results using values in the session'''
-    return ["Shopping", "Staying at Home", "Eating"]
+    points = {}
+    activities = ["Shopping", "Staying at Home", "Eating",
+                  "Adventure", "Active", "Active Alone", "Eating Alone",
+                  "Staying Home Alone"]
+    for a in activities:
+        points[a] = 0
+        
+    #Question 1
+    if session["number in group"]=="1 Person":
+        points["Active Alone"] = points["Active Alone"] + 10
+        points["Staying Home Alone"] = points["Staying Home Alone"] + 10
+        points["Eating Alone"] = points["Eating Alone"] + 10
+        points["Shopping"] = points["Shopping"] + 10
+    
+    if session["number in group"]=="2-6 People":
+        points["Eating Alone"] = points["Eating Alone"] + 5
+        points["Shopping"] = points["Shopping"] + 10
+        points["Eating"] = points["Eating"] + 10
+        points["Adventure"] = points["Adventure"] + 10
+        points["Active"] = points["Active"] + 10
+        points["Staying at Home"] = points["Staying at Home"] + 10
+        
+    if session["number in group"]=="More than 6 People":
+        points["Shopping"] = points["Shopping"] + 5
+        points["Eating"] = points["Eating"] + 10
+        points["Adventure"] = points["Adventure"] + 10
+        points["Active"] = points["Active"] + 10
+        points["Staying at Home"] = points["Staying at Home"] + 10
+
+    #Question 2
+    if session["hungry"]=="Yes":
+        points["Active Alone"] = points["Active Alone"] + 3
+        points["Staying Home Alone"] = points["Staying Home Alone"] + 5
+        points["Eating Alone"] = points["Eating Alone"] + 8
+        points["Shopping"] = points["Shopping"] + 5
+        points["Eating"] = points["Eating"] + 8
+        points["Adventure"] = points["Adventure"] + 3
+        points["Active"] = points["Active"] + 3
+        points["Staying at Home"] = points["Staying at Home"] + 5
+
+    if session["hungry"]=="No":
+        points["Eating Alone"] = points["Eating Alone"] - 5
+        points["Eating"] = points["Eating"] - 5
+
+    #Question 3
+    if session["indoors or outdoors"]=="Indoors":
+        points["Staying Home Alone"] = points["Staying Home Alone"] + 8
+        points["Eating Alone"] = points["Eating Alone"] + 3
+        points["Shopping"] = points["Shopping"] + 5
+        points["Eating"] = points["Eating"] + 3
+        points["Staying at Home"] = points["Staying at Home"] + 8
+
+    if session["indoors or outdoors"]=="Outdoors":
+        points["Active Alone"] = points["Active Alone"] + 8
+        points["Shopping"] = points["Shopping"] + 5
+        points["Eating"] = points["Eating"] + 2
+        points["Adventure"] = points["Adventure"] + 8
+        points["Active"] = points["Active"] + 8
+
+    #Question 4
+    if session["money"]=="None":
+        points["Active Alone"] = points["Active Alone"] + 6
+        points["Staying Home Alone"] = points["Staying Home Alone"] + 8
+        points["Eating Alone"] = points["Eating Alone"] + 5
+        points["Active"] = points["Active"] + 6
+        points["Staying at Home"] = points["Staying at Home"] + 8
+
+    if session["money"]=="Under $10":
+        points["Active Alone"] = points["Active Alone"] + 8
+        points["Staying Home Alone"] = points["Staying Home Alone"] + 8
+        points["Eating Alone"] = points["Eating Alone"] + 8
+        points["Shopping"] = points["Shopping"] + 3
+        points["Eating"] = points["Eating"] + 8
+        points["Active"] = points["Active"] + 8
+        points["Staying at Home"] = points["Staying at Home"] + 8
+
+    if session["money"]=="$10-$25":
+        points["Active Alone"] = points["Active Alone"] + 8
+        points["Staying Home Alone"] = points["Staying Home Alone"] + 8
+        points["Eating Alone"] = points["Eating Alone"] + 8
+        points["Shopping"] = points["Shopping"] + 5
+        points["Eating"] = points["Eating"] + 8
+        points["Adventure"] = points["Adventure"] + 5
+        points["Active"] = points["Active"] + 8
+        points["Staying at Home"] = points["Staying at Home"] + 8
+
+    #Question 5
+    if session["active"]=="None":
+        points["Staying Home Alone"] = points["Staying Home Alone"] + 6
+        points["Eating Alone"] = points["Eating Alone"] + 3
+        points["Eating"] = points["Eating"] + 3
+        points["Staying at Home"] = points["Staying at Home"] + 6
+
+    
+        
+    sortedActivities = sorted( activities, key=lambda a:points[a], reverse=True) 
+    return (sortedActivities, points)
+
+
+##
+##    if session["number in group"]=="2-6 People":
+##        points["Active Alone"] = points["Active Alone"] + 
+##        points["Staying Home Alone"] = points["Staying Home Alone"] + 
+##        points["Eating Alone"] = points["Eating Alone"] + 
+##        points["Shopping"] = points["Shopping"] + 
+##        points["Eating"] = points["Eating"] + 
+##        points["Adventure"] = points["Adventure"] + 
+##        points["Active"] = points["Active"] + 
+##        points["Staying at Home"] = points["Staying at Home"] + 
+
 
 @app.route('/results',methods=['get','post'])
 def results():
     session["character traits"]=request.form["character traits"]
-    recommendedActivities = calculateResults()
-    return render_template('results.html', activities = recommendedActivities)
+    (recommendedActivities, points) = calculateResults()
+    return render_template('results.html', activities = recommendedActivities, points = points)
 
 @app.route('/eat',methods=['get','post'])
 def food():
