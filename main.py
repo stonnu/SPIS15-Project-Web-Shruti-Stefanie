@@ -46,6 +46,10 @@ def sixthQuestion():
 def food():
     return render_template('eat.html')
 
+@app.route('/eatalone',methods=['get','post'])
+def eatAlone():
+    return render_template('eat_alone.html')
+
 @app.route('/shopping',methods=['get','post'])
 def shopping():
     return render_template('shopping.html')
@@ -54,9 +58,17 @@ def shopping():
 def stayAtHome():
     return render_template('stayinghome.html')
 
+@app.route('/alonetime',methods=['get','post'])
+def aloneTime():
+    return render_template('alonetime.html')
+
 @app.route('/active',methods=['get','post'])
 def beActive():
     return render_template('active.html')
+
+@app.route('/activealone',methods=['get','post'])
+def activeAlone():
+    return render_template('active_alone.html')
 
 @app.route('/explore',methods=['get','post'])
 def goExplore():
