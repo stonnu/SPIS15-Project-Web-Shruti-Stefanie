@@ -252,4 +252,4 @@ def goExplore():
     return render_template('adventure.html')
 
 if __name__ == "__main__":
-    app.run(port=5678, debug = True)
+    app.run(port=5678, debug = False)
