@@ -10,9 +10,11 @@ Click on the categories that appeal to you for more detailed suggestions.</p>
 
 <ul>
 {% for a in activities[0:3]  %}
-<li> {{ a }}, {{ points[a] }} </li>
+<li> {{ a }} </li>
 {% endfor    %}
 
 </ul>
+
+<a href="/restart">Try Again</a>
 
 {% endblock %}
