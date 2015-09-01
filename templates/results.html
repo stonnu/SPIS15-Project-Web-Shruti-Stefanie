@@ -10,7 +10,16 @@ Click on the categories that appeal to you for more detailed suggestions.</p>
 
 <ul>
 {% for a in activities[0:3]  %}
-<li> {{ a }} </li>
+<li>
+{% if a in activity_urls %}
+<a href="{{ activity_urls[a] }}">
+{{ a }}
+</a>
+
+{% else %}
+{{ a }}
+{% endif %}
+</li>
 {% endfor    %}
 
 </ul>

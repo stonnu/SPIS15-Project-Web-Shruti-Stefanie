@@ -48,6 +48,18 @@ def sixthQuestion():
     session["active"]=request.form["active"]
     return render_template('question6.html')
 
+shopping = "Shopping"
+adventure = "Exploring"
+exercise = "Exercising"
+cook = "Cooking"
+active = "Being Active"
+
+activities = [shopping, "Staying at Home", "Eating",
+              adventure, active, exercise, cook,
+              "Staying Home"]
+
+activity_urls = {shopping:"/shopping",
+                 "Staying at Home":"/stayinghome"}
 
 def calculateResults():
     '''this calculates results using values in the session'''
@@ -57,10 +69,11 @@ def calculateResults():
     exercise = "Exercising"
     cook = "Cooking"
     active = "Being Active"
-    
+
     activities = [shopping, "Staying at Home", "Eating",
-                  adventure, active, exercise, cook,
-                  "Staying Home"]
+              adventure, active, exercise, cook,
+              "Staying Home"]
+    
     for a in activities:
         points[a] = 0
         
@@ -217,7 +230,8 @@ def calculateResults():
 def results():
     session["character traits"]=request.form["character traits"]
     (recommendedActivities, points) = calculateResults()
-    return render_template('results.html', activities = recommendedActivities, points = points)
+    return render_template('results.html', activities = recommendedActivities,
+                           points = points, activity_urls = activity_urls)
 
 @app.route('/eat',methods=['get','post'])
 def food():
@@ -252,4 +266,4 @@ def goExplore():
     return render_template('adventure.html')
 
 if __name__ == "__main__":
-    app.run(port=5678, debug = False)
+    app.run(port=5678, debug = True)
