@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}Here are your results!{% endblock %}
+
+{% block content %}
+
+<h1>Your Results</h1>
+<p>Based on your answers to the quiz, here are some activities you will enjoy.
+Click on the categories that appeal to you for more detailed suggestions.</p>
+
+<ul>
+{% for a in activities[0:3]  %}
+<li>
+{% if a in activity_urls %}
+<a href="{{ activity_urls[a] }}">
+{{ a }}
+</a>
+
+{% else %}
+{{ a, points[a] }}
+{% endif %}
+</li>
+{% endfor    %}
+
+</ul>
+
+<p class="button"> <a class="begin" href="/restart">Try Again</a> </p>
+
+{% endblock %}
