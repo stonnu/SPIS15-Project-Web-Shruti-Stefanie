@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<img src="{{ url_for('static', filename='images/stayAtHome.png') }}" alt="Stay at Home" width=620px height=200px;>
+<h1>Stay at Home</h1>
 <h2>Here are some options:</h2>
 <h3>Board Games</h3>
 <p>Gather around in a circle and take out some good ol' games to play:</p>

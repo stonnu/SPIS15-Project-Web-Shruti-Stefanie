@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<img src="{{ url_for('static', filename='images/goExploring.png') }}" alt="Go Exploring" width=620px height=200px;>
+<h1>Go Exploring</h1>
 <h2>Here are some options:</h2>
 <h3>Take a Trip</h3>
 <p>Kick back, relax, and go to:</p>

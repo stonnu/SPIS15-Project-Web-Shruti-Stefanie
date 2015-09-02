@@ -4,47 +4,39 @@
 
 {% block content %}
 
-<img src="{{ url_for('static', filename='images/cook.png') }}" alt="Cook Some Food" width=620px height=200px;>
+<img src="{{ url_for('static', filename='images/eat.png') }}" alt="Eat" width=600px height=200px;>
 <h2>Here are some options:</h2>
-
-<h3>Beginners' Choices</h3>
-<h3>Cooking</h3>
+<h3>Go to a restaurant</h3>
+<ul>
+    <li>Japanese</li>
+    <li>Chinese</li>
+    <li>Italian</li>
+    <li>Mediterranean</li>
+    <li>Mexican</li>
+    <li>American</li>
+</ul>
+<h3>Cook some food</h3>
 <ul>
     <li>Pasta</li>
     <li>Omelet</li>
     <li>Chicken</li>
     <li>Stir Fry</li>
     <li>Sandwich</li>
-    <li>Noodles</li>
-    <li>Fried Rice</li>
-    <li>Macaroni and Cheese</li>
-</ul>
-<h3>Baking</h3>
-<ul>
     <li>Cookies</li>
     <li>Brownies</li>
     <li>Cake</li>
-    <li>Cupcakes</li>
-    <li>Popsicles</li>
 </ul>
-
-<h3>Challenges:</h3>
-<h3>Cooking</h3>
+<h3>If you're up for a challenge:</h3>
 <ul>
     <li>Chicken Cordon Bleu</li>
     <li>Casserole</li>
     <li>Lasagna</li>
     <li>Gnocchi</li>
-</ul>
-<h3>Baking</h3>
-<ul>
     <li>Creme Brulee</li>
     <li>Macaroons</li>
-    <li>Ice cream cake</li>
-    <li>Panna Cotta</li>
-    <li>Flan</li>
 </ul>
 
 <input class="button" type="button" value="Back" onclick="history.back(-1)" />
+
 
 {% endblock %}

@@ -4,19 +4,29 @@
 
 {% block content %}
 
-<img src="{{ url_for('static', filename='images/exercise.png') }}" alt="Exercise" width=620px height=200px;>
+<img src="{{ url_for('static', filename='images/getActive.png') }}" alt="Eat" width=620px height=200px;>
 <h2>Here are some options:</h2>
-<h3>Outdoor Exercise</h3>
-<p>Get your body moving by doing any of the following:</p>
+<h3>Sports</h3>
+<p>Grab some friends and play some classic sports:</p>
 <ul>
     <li>Basketball</li>
+    <li>Soccer</li>
+    <li>Ultimate Frisbee</li>
     <li>Swimming</li>
+    <li>Volleyball</li>
     <li>Tennis</li>
-    <li>Running</li>
-    <li>Stroll in the park</li>
+    <li>Capture the Flag</li>
     
 </ul>
-
+<h3>Outdoor Activities</h3>
+<p>Here are some other stimulating activities you could try:</p>
+<ul>
+    <li>Stroll in the park</li>
+    <li>Water balloon fight</li>
+    <li>Nerf gun war</li>
+    <li>Shaving cream Twister</li>
+    
+</ul>
 <h3>Go to the Gym</h3>
 <p>Get in a good workout with any of the following:</p>
 <ul>
