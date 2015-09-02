@@ -4,7 +4,7 @@ body {
     margin-right: 100px;
     font-size:22px;
     background-image: url('images/background.jpg');
-    background-size: 500% 500%;
+    background-size: 200% 200%;
 }
 
 h1 {
