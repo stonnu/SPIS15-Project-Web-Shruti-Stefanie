@@ -59,7 +59,13 @@ activities = [shopping, "Staying at Home", "Eating",
               "Staying Home"]
 
 activity_urls = {shopping:"/shopping",
-                 "Staying at Home":"/stayinghome"}
+                 "Staying at Home":"/stayinghome",
+                 "Eating":"/eat",
+                 adventure:"/explore",
+                 active:"/active",
+                 exercise:"/activealone",
+                 cook:"/eatalone",
+                 "Staying Home":"/alonetime"}
 
 def calculateResults():
     '''this calculates results using values in the session'''
