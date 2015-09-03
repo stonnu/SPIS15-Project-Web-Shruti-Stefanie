@@ -4,10 +4,10 @@
 
 {% block content %}
 
-<h1>Which of these best applies to your group of friends?</h1>
+<h1>Which of these best applies to you and/or your group of friends?</h1>
 
 <form method="post" action={{url_for("results")}}>
-    <input type="radio" name="character traits" value="Active">Active
+    <input type="radio" name="character traits" value="Active" checked>Active
     <br>
     <input type="radio" name="character traits" value="Calm">Calm
     <br>

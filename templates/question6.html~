@@ -7,7 +7,7 @@
 <h1>Which of these best applies to your group of friends?</h1>
 
 <form method="post" action={{url_for("results")}}>
-    <input type="radio" name="character traits" value="Active">Active
+    <input type="radio" name="character traits" value="Active" checked>Active
     <br>
     <input type="radio" name="character traits" value="Calm">Calm
     <br>
@@ -24,7 +24,7 @@
     <input type="radio" name="character traits" value="Trendy">Trendy
     <br>
     <br>
-    <input type ="submit" value="Submit">
+    <input type="button" value="Back" onclick="history.back(-1)" /> <input type ="submit" value="Submit">
 </form>
 
 {% endblock %}
