@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<h1>Cook some food</h1>
+<img src="{{ url_for('static', filename='images/cook.png') }}" alt="Cook Some Food" width=620px height=200px;>
 <h2>Here are some options:</h2>
 
 <h3>Beginners' Choices</h3>
