@@ -109,16 +109,16 @@ def calculateResults():
     if session["hungry"]=="Yes":
         points[exercise] = points[exercise] + 3
         points["Staying Home"] = points["Staying Home"] + 5
-        points[cook] = points[cook] + 8
+        points[cook] = points[cook] + 10
         points[shopping] = points[shopping] + 5
-        points["Eating"] = points["Eating"] + 8
+        points["Eating"] = points["Eating"] + 10
         points[adventure] = points[adventure] + 3
         points[active] = points[active] + 3
         points["Staying at Home"] = points["Staying at Home"] + 5
 
     if session["hungry"]=="No":
-        points[cook] = points[cook] - 10
-        points["Eating"] = points["Eating"] - 10
+        points[cook] = points[cook] - 20
+        points["Eating"] = points["Eating"] - 20
 
     #Question 3
     if session["indoors or outdoors"]=="Indoors":
@@ -147,13 +147,13 @@ def calculateResults():
 	points[shopping] = points[shopping] - 10
 
     if session["money"]=="Under $10":
-        points[exercise] = points[exercise] + 10
-        points["Staying Home"] = points["Staying Home"] + 10
-        points[cook] = points[cook] + 10
+        points[exercise] = points[exercise] + 7
+        points["Staying Home"] = points["Staying Home"] + 7
+        points[cook] = points[cook] + 7
         points[shopping] = points[shopping] + 3
-        points["Eating"] = points["Eating"] + 10
-        points[active] = points[active] + 10
-        points["Staying at Home"] = points["Staying at Home"] + 10
+        points["Eating"] = points["Eating"] + 7
+        points[active] = points[active] + 7
+        points["Staying at Home"] = points["Staying at Home"] + 7
 
     if session["money"]=="$10-$25":
         points[exercise] = points[exercise] + 10
@@ -167,30 +167,30 @@ def calculateResults():
 
     #Question 5
     if session["active"]=="None":
-        points["Staying Home"] = points["Staying Home"] + 9
+        points["Staying Home"] = points["Staying Home"] + 10
         points[cook] = points[cook] + 6
         points["Eating"] = points["Eating"] + 6
-        points["Staying at Home"] = points["Staying at Home"] + 9
+        points["Staying at Home"] = points["Staying at Home"] + 10
 	points[active] = points[active] - 10
 	points[exercise] = points[exercise] - 10
 
     if session["active"]=="Little":
-        points["Staying Home"] = points["Staying Home"] + 9
-        points[cook] = points[cook] + 9
+        points["Staying Home"] = points["Staying Home"] + 8
+        points[cook] = points[cook] + 8
         points[shopping] = points[shopping] + 6
-        points["Eating"] = points["Eating"] + 9
-        points["Staying at Home"] = points["Staying at Home"] + 9
+        points["Eating"] = points["Eating"] + 8
+        points["Staying at Home"] = points["Staying at Home"] + 8
 	points[active] = points[active] - 3
 	points[exercise] = points[exercise] - 3
 
     if session["active"]=="Lot":
         points[exercise] = points[exercise] + 9
-        points["Staying Home"] = points["Staying Home"] + 6
-        points[cook] = points[cook] + 9
+        points["Staying Home"] = points["Staying Home"] + 4
+        points[cook] = points[cook] + 8
         points[shopping] = points[shopping] + 9
-        points["Eating"] = points["Eating"] + 9
+        points["Eating"] = points["Eating"] + 8
         points[active] = points[active] + 9
-        points["Staying at Home"] = points["Staying at Home"] + 6
+        points["Staying at Home"] = points["Staying at Home"] + 4
 
     if session["active"]=="You are crazy":
         points[exercise] = points[exercise] + 9
